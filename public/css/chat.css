@@ -1,0 +1,193 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  margin: 0;
+}
+/* // 聊天 样式 */
+.chat-container {
+  width: 80%;
+  height: 90%;
+  background: #222;
+  border-color: #555;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chat-container-top {
+  width: calc(100% - 20px);
+  height: calc(100% - 110px);
+  overflow-y: scroll;
+  margin: 10px 10px 5px 10px;
+  border: 1px solid #626365;
+  border-radius: 15px;
+}
+/* // 隐藏滚动条 */
+.chat-container-top::-webkit-scrollbar {
+  display: none;
+}
+.chat-container-bottom {
+  width: clac(100% - 20px);
+  height: calc(90px - 20px);
+  margin: 3px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-container {
+  width: 45px;
+  height: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* // 聊天界面 */
+.chat-container-top-message {
+  width: calc(100% - 30px);
+  min-height: 40px;
+  padding: 5px 15px;
+  float: left;
+}
+/* // 消息条目 */
+.chat-container-text-name {
+  width: calc(60px - 10px);
+  height: calc(40px - 10px);
+  margin: 0 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  color: #fff;
+}
+.chat-container-text-message {
+  max-width: calc(100% - 120px);
+  min-height: 40px;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 10px 10px;
+  text-align: justify;
+  text-justify: newspaper;
+  word-break: break-all;
+  /* color: #000; */
+  margin: 5px 0;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+/* //浮动位置 */
+.left-container {
+  float: left;
+}
+.right-container {
+  float: right;
+}
+/* //消息位置倒角 */
+.right-border-r {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.left-border-r {
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.el-textarea__inner {
+  background-color: rgba(0, 0, 0) !important;
+  color: #dcdfe6 !important;
+  width: calc(100% - 10px) !important;
+  border: 1px #626365 solid !important;
+}
+/* //自定义按钮 */
+.el-button--success {
+  color: #fff;
+  background-color: #00cfe6 !important;
+  border-color: #00cfe6 !important;
+  line-height: 2 !important;
+}
+/* // 表情弹窗 */
+.expression-icon-container {
+  max-width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.expression-icon-container::-webkit-scrollbar {
+  display: none;
+}
+.expression-icon-container-img {
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin: 2px 2px;
+}
+/* //表情弹窗媒体查询 */
+@media (max-width: 315px) {
+  .expression-img {
+    width: calc(50% - 3px);
+  }
+}
+@media (max-width: 465px) {
+  .expression-img {
+    width: calc(33% - 3.3px);
+  }
+}
+@media (min-width: 615px) {
+  .expression-img {
+    width: calc(20% - 6px);
+  }
+}
+/* //自定义弹窗 */
+.el-message-box {
+  max-width: 80% !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: #dcdfe6 1px solid !important;
+}
+.el-message-box__content {
+  color: #dcdfe6 !important;
+  font-size: 12px !important;
+}
+.el-message-box__title {
+  color: #dcdfe6 !important;
+}
+.el-input__inner {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: #dcdfe6 !important;
+}
+.el-dialog__header {
+  display: none !important;
+}
+.el-dialog__body {
+  padding: 5px 5px !important;
+}
+.el-dialog {
+  background: rgba(0, 0, 0, 0) !important;
+}
+/* //上线提醒自定义样式 */
+.el-notification {
+  background-color: #f56c6c !important;
+  border-radius: 30px !important;
+  border: none !important;
+  width: 130px !important;
+}
+.el-notification__title {
+  display: none !important;
+}
+.el-notification__content {
+  margin: 0px !important;
+  color: #dcdfe6 !important;
+}
+/* 进度条 */
+.el-progress-bar{
+  padding: 0 50px !important;
+  width: 95% !important;
+}
+.el-progress__text{
+  /* display: none !important; */
+  color:rgba(172, 23, 185, 0.6) !important;
+}
+.el-progress-bar__outer{
+  background-color: rgba(0, 0, 0,0) !important;
+}
